@@ -42,6 +42,7 @@ class MainActivity : ComponentActivity() {
             HappyBirthdayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
+                    BirthdayGreetingWithText("Happy Birthday Sam!", "- from Emma")
                 }
             }
         }
@@ -52,15 +53,16 @@ class MainActivity : ComponentActivity() {
     fun BirthdayGreetingWithText(message: String, from: String) {
         // Create a column so that texts don't overlap
         //Column { }
-        Text(
-            text = message,
-            fontSize = 36.sp
-        )
-
-        Text(
-            text = from,
-            fontSize = 24.sp
-        )
+        Row{
+            Text(
+                text = message,
+                fontSize = 36.sp,
+            )
+            Text(
+                text = from,
+                fontSize = 24.sp,
+            )
+        }
     }
 
     // 5. Box 레이아웃 추
