@@ -58,3 +58,7 @@ fun BirthdayGreetingWithImage(message: String, from: String) { }
 @Composable
 private fun BirthdayCardPreview() { }
 
+fun birthdayGreeting(name: String = "Rover", age: Int): String {
+    return "Happy Birthday, $name! You are now $age years old!"
+}
+
