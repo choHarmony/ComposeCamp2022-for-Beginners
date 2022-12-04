@@ -68,6 +68,11 @@ class MainActivity : ComponentActivity() {
     // 5. Box 레이아웃 추
     @Composable
     fun BirthdayGreetingWithImage(message: String, from: String) {
+        val image = painterResource(R.drawable.androidparty)
+        Image(
+            painter = image,
+            contentDescription = null
+        )
     }
 
     // 4. 이미지 컴포저블 추가
