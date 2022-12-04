@@ -49,11 +49,17 @@ class MainActivity : ComponentActivity() {
 
     // 7. 텍스트 정렬 및 패딩 추가
     @Composable
-    fun BirthdayGreetingWithText(message: String) {
+    fun BirthdayGreetingWithText(message: String, from: String) {
         // Create a column so that texts don't overlap
         //Column { }
         Text(
-            text = message
+            text = message,
+            fontSize = 36.sp
+        )
+
+        Text(
+            text = from,
+            fontSize = 24.sp
         )
     }
 
@@ -72,7 +78,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     private fun BirthdayCardPreview() {
         HappyBirthdayTheme {
-            BirthdayGreetingWithText("Happy Birthday Sam!")
+            BirthdayGreetingWithText("Happy Birthday Sam!", "- from Emma")
         }
     }
 
