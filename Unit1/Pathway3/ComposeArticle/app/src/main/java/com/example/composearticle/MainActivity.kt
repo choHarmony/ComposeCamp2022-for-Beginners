@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -39,10 +40,26 @@ private fun ArticleCard(
     imagePainter: Painter,
     modifier: Modifier = Modifier,
 ) {
-    Column() { }
+    Column() {
+        val banner = painterResource(id = R.drawable.bg_compose_background)
+        Image(
+            painter = banner,
+            contentDescription = null,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
 }
 
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() { }
+fun DefaultPreview() {
+    Column() {
+        val banner = painterResource(id = R.drawable.bg_compose_background)
+        Image(
+            painter = banner,
+            contentDescription = null,
+            modifier = Modifier.fillMaxWidth()
+        )
+    }
+}
