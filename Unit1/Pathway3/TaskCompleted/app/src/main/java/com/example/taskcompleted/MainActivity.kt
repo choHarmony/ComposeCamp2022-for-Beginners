@@ -39,6 +39,11 @@ fun DefaultPreview() {
             .fillMaxHeight(),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center) {
-        
+        val completeIcon = painterResource(id = R.drawable.ic_task_completed)
+        Image(
+            painter = completeIcon,
+            contentDescription = null,
+        )
+
     }
 }
