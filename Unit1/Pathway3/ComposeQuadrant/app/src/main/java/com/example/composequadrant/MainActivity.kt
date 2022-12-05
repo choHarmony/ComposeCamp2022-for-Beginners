@@ -52,6 +52,11 @@ private fun ComposableInfoCard(
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 16.dp)
         )
+
+        Text(
+            text = description,
+            textAlign = TextAlign.Justify
+        )
     }
 }
 
