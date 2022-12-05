@@ -61,5 +61,26 @@ fun DefaultPreview() {
             contentDescription = null,
             modifier = Modifier.fillMaxWidth()
         )
+
+        Text(
+            text = stringResource(R.string.title_jetpack_compose_tutorial),
+            fontSize = 24.sp,
+            modifier = Modifier
+                .padding(start = 16.dp, top = 16.dp, bottom = 16.dp, end = 16.dp)
+        )
+
+        Text(
+            text = stringResource(R.string.compose_short_desc),
+            modifier = Modifier
+                .padding(start = 16.dp, end = 16.dp),
+            textAlign = TextAlign.Justify
+        )
+
+        Text(
+            text = stringResource(R.string.compose_long_desc),
+            modifier = Modifier
+                .padding(start = 16.dp, top = 16.dp, bottom = 16.dp, end = 16.dp),
+            textAlign = TextAlign.Justify
+        )
     }
 }
