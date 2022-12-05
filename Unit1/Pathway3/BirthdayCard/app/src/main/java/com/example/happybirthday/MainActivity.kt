@@ -72,7 +72,10 @@ class MainActivity : ComponentActivity() {
         Box {
             Image(
                 painter = image,
-                contentDescription = null
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth()
             )
             BirthdayGreetingWithText(message = message, from = from)
         }
