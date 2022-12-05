@@ -33,4 +33,12 @@ fun TaskCompletedScreen() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() { }
+fun DefaultPreview() {
+    Column(modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center) {
+        
+    }
+}
