@@ -45,5 +45,15 @@ fun DefaultPreview() {
             contentDescription = null,
         )
 
+        Text(
+            text = stringResource(R.string.all_task_completed),
+            modifier = Modifier.padding(top = 24.dp, bottom = 8.dp),
+            fontWeight = FontWeight.Bold
+        )
+
+        Text(
+            text = stringResource(R.string.nice_work),
+            fontSize = 16.sp
+        )
     }
 }
