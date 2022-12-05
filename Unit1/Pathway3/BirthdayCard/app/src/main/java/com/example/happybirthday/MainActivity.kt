@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
             HappyBirthdayTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    BirthdayGreetingWithImage("Happy Birthday Sam!", "- from Emma")
+                    BirthdayGreetingWithImage(stringResource(R.string.happy_birthday_text), stringResource(R.string.signature_text))
                 }
             }
         }
@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                 fontSize = 36.sp,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .wrapContentWidth(Alignment.Start)
+                    .wrapContentWidth(Alignment.CenterHorizontally)
                     .padding(start = 16.dp, top = 16.dp)
             )
             Text(
@@ -67,7 +67,7 @@ class MainActivity : ComponentActivity() {
                 fontSize = 24.sp,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .wrapContentWidth(Alignment.End)
+                    .wrapContentWidth(Alignment.CenterHorizontally)
                     .padding(start = 16.dp, end = 16.dp)
             )
         }
