@@ -41,7 +41,18 @@ private fun ComposableInfoCard(
     backgroundColor: Color,
     modifier: Modifier = Modifier
 ) {
-    Column( ) { }
+    Column(modifier = modifier
+        .fillMaxSize()
+        .background(backgroundColor)
+        .padding(16.dp),
+    horizontalAlignment = Alignment.CenterHorizontally,
+    verticalArrangement = Arrangement.Center) {
+        Text(
+            text = title,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
+    }
 }
 
 
