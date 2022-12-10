@@ -39,7 +39,29 @@ fun LemonApp() {
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
     ) {
-        Text(text = "Hello there!")
+        var order = 1
+        when (order) {
+            1 -> LemonTextAndImage(
+                textLabelId = R.string.lemon_select,
+                drawableId = R.drawable.lemon_tree,
+                descriptionId = R.string.lemon_tree_content_description,
+                onImageClick = { order++ })
+            2 -> LemonTextAndImage(
+                textLabelId = R.string.lemon_squeeze,
+                drawableId = R.drawable.lemon_squeeze,
+                descriptionId = R.string.lemon_content_description,
+                onImageClick = { order++ })
+            3 -> LemonTextAndImage(
+                textLabelId = R.string.lemon_drink,
+                drawableId = R.drawable.lemon_drink,
+                descriptionId = R.string.lemonade_content_description,
+                onImageClick = { order++ })
+            4 -> LemonTextAndImage(
+                textLabelId = R.string.lemon_empty_glass,
+                drawableId = R.drawable.lemon_restart,
+                descriptionId = R.string.empty_glass_content_description,
+                onImageClick = { order = 1 })
+        }
     }
 }
 
